@@ -19,6 +19,10 @@ get_gene <- function(accession)
 
     gene <- parse_result$gene[[1]]$name$value
 
-    return(gene)
+    if (is.null(gene)) {
+        return('NA')
+    } else{
+        return(gene)
+    }
 
 }
